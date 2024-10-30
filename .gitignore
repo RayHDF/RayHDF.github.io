@@ -1,0 +1,4 @@
+node_modules/
+*.log
+# DON'T ignore the dist folder since we need it for deployment
+# dist/
