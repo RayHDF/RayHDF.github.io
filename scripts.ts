@@ -11,8 +11,6 @@ interface Project {
   skills: string[];
   github: string;
 }
-
-// Add this interface after the existing interfaces
 interface BlogPost {
   date: string;
   title: string;
@@ -67,7 +65,6 @@ const projects: Project[] = [
   },
 ];
 
-// Add this after the existing const arrays
 const blogPosts: BlogPost[] = [
   {
     date: "30-10-2024",
@@ -84,7 +81,6 @@ const projectsContainer = document.querySelector(
 ) as HTMLElement;
 const filterButtons = document.querySelectorAll(".filter-btn");
 
-// Add these lines after the existing container constants
 const blogContainer = document.querySelector(".blog-container") as HTMLElement;
 
 function createSkillCard(skill: Skill): string {
@@ -120,7 +116,6 @@ function createProjectCard(project: Project): string {
     `;
 }
 
-// Add this function before displayContent
 function createBlogPost(post: BlogPost): string {
   return `
         <article class="blog-post">
@@ -134,7 +129,6 @@ function createBlogPost(post: BlogPost): string {
     `;
 }
 
-// Modify the displayContent function to handle blogs
 function displayContent(
   filter: "skills" | "projects" | "blog" = "skills"
 ): void {
