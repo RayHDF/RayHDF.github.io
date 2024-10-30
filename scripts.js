@@ -1,7 +1,7 @@
 const skills = [
     { name: 'JavaScript', level: 85, category: 'frontend', icon: 'fab fa-js' },
     { name: 'React', level: 90, category: 'frontend', icon: 'fab fa-react' },
-    { name: 'CSS', level: 80, category: 'frontend', icon: 'fab fa-css3-alt' },
+    { name: 'CSS', level: 70, category: 'frontend', icon: 'fab fa-css3-alt' },
     { name: 'Node.js', level: 75, category: 'backend', icon: 'fab fa-node-js' },
     { name: 'Python', level: 95, category: 'backend', icon: 'fab fa-python' },
     { name: 'MongoDB', level: 80, category: 'backend', icon: 'fas fa-database' },
