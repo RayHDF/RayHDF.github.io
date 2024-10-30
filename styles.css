@@ -226,6 +226,43 @@ header p {
   color: var(--primary);
 }
 
+.blog-container {
+  display: none;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.blog-post {
+  background: var(--surface);
+  padding: 2rem;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  margin-bottom: 1.5rem;
+  transition: all 0.2s ease;
+}
+
+.blog-post:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.blog-date {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+}
+
+.blog-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.blog-content {
+  color: var(--text);
+  line-height: 1.6;
+}
+
 @media (max-width: 640px) {
   .container {
       padding: 1rem;
@@ -246,5 +283,9 @@ header p {
   
   .projects-container {
       grid-template-columns: 1fr;
+  }
+  
+  .blog-container {
+      padding: 0 1rem;
   }
 }
