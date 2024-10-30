@@ -11,7 +11,35 @@ const skills = [
     { name: 'Flutter', level: 85, category: 'tools', icon: 'fab fa-flutter' }
 ];
 
+const projects = [
+    {
+        title: 'This Website :D',
+        description: 'My personal portfolio website built with HTML, CSS, and JavaScript.',
+        skills: ['JavaScript', 'HTML', 'CSS'],
+        github: '#'
+    },
+    {
+        title: 'Face Recognition Attendance Mobile App',
+        description: 'A Flutter app that uses geofencing and Python with OpenCV to recognize faces and mark attendance.',
+        skills: ['Flutter', 'Python', 'Flask', 'OpenCV'],
+        github: '#'
+    },
+    {
+        title: 'Habit Tracker',
+        description: 'A habit tracking app built with Android Studio (Kotlin) and Firebase.',
+        skills: ['Android Studio', 'Kotlin', 'Firebase'],
+        github: '#'
+    },
+    {
+        title: 'Simple Diabetes Prediction App',
+        description: 'A simple diabetes prediction app built with TKinter and Machine Learning.',
+        skills: ['Python', 'Machine Learning', 'TKinter'],
+        github: '#'
+    }
+];
+
 const skillsContainer = document.querySelector('.skills-container');
+const projectsContainer = document.querySelector('.projects-container');
 const filterButtons = document.querySelectorAll('.filter-btn');
 
 function createSkillCard(skill) {
@@ -28,20 +56,42 @@ function createSkillCard(skill) {
     `;
 }
 
-function displaySkills(category = 'all') {
-    const filteredSkills = category === 'all' 
-        ? skills 
-        : skills.filter(skill => skill.category === category);
+function createProjectCard(project) {
+    const skillBadges = project.skills
+        .map(skill => `<span class="skill-badge">${skill}</span>`)
+        .join('');
+        
+    return `
+        <div class="project-card">
+            <h3>${project.title}</h3>
+            <p class="project-description">${project.description}</p>
+            <div class="project-skills">
+                ${skillBadges}
+            </div>
+            <a href="${project.github}" class="project-link">
+                <i class="fab fa-github"></i> Private Repository
+            </a>
+        </div>
+    `;
+}
+
+function displayContent(filter = 'skills') {
+    skillsContainer.style.display = filter === 'skills' ? 'grid' : 'none';
+    projectsContainer.style.display = filter === 'projects' ? 'grid' : 'none';
     
-    skillsContainer.innerHTML = filteredSkills.map(createSkillCard).join('');
+    if (filter === 'skills') {
+        skillsContainer.innerHTML = skills.map(createSkillCard).join('');
+    } else {
+        projectsContainer.innerHTML = projects.map(createProjectCard).join('');
+    }
 }
 
 filterButtons.forEach(button => {
     button.addEventListener('click', () => {
         filterButtons.forEach(btn => btn.classList.remove('active'));
         button.classList.add('active');
-        displaySkills(button.dataset.filter);
+        displayContent(button.dataset.filter);
     });
 });
 
-displaySkills();
+displayContent('skills');
