@@ -13,19 +13,13 @@ const skills = [
 
 const projects = [
     {
-        title: 'This Website :D',
-        description: 'My personal portfolio website built with HTML, CSS, and JavaScript.',
-        skills: ['JavaScript', 'HTML', 'CSS'],
-        github: '#'
-    },
-    {
         title: 'Face Recognition Attendance Mobile App',
         description: 'A Flutter app that uses geofencing and Python with OpenCV to recognize faces and mark attendance.',
         skills: ['Flutter', 'Python', 'Flask', 'OpenCV'],
         github: '#'
     },
     {
-        title: 'Habit Tracker',
+        title: 'Habit Tracker App',
         description: 'A habit tracking app built with Android Studio (Kotlin) and Firebase.',
         skills: ['Android Studio', 'Kotlin', 'Firebase'],
         github: '#'
@@ -33,9 +27,15 @@ const projects = [
     {
         title: 'Simple Diabetes Prediction App',
         description: 'A simple diabetes prediction app built with TKinter and Machine Learning.',
-        skills: ['Python', 'Machine Learning', 'TKinter'],
+        skills: ['Python', 'Machine Learning', 'Data Science', 'TKinter'],
         github: '#'
-    }
+    },
+    {
+        title: '2D Rogue-like Game',
+        description: 'A 2D rogue-like dungeon game built with Unity.',
+        skills: ['Unity', 'C#'],
+        github: '#'
+    },
 ];
 
 const skillsContainer = document.querySelector('.skills-container');
