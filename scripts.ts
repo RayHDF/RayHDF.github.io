@@ -63,6 +63,18 @@ const projects: Project[] = [
     skills: ["Unity", "C#"],
     github: "#",
   },
+  {
+    title: "Microservice Business Management System (WIP)",
+    description: "A microservice-based business management system to track transactions, customers, and services",
+    skills: ["Express.js", "Supabase", "React", "Node.js", "TypeScript"],
+    github: "WIP"
+  },
+  {
+    title: "Learning Management System (WIP)",
+    description: "A Learning Management System to manage courses, students, and lecturers",
+    skills: ["PostgreSQL", "Express.js", "React", "Node.js", "TypeScript"],
+    github: "WIP"
+  },
 ];
 
 const blogPosts: BlogPost[] = [
@@ -71,6 +83,11 @@ const blogPosts: BlogPost[] = [
     title: "My First Blog Post",
     content: `Hello! This is my first blog post. I will share my experiences and thoughts here.`,
   },
+  {
+    date: "31-10-2024",
+    title: "My Second Blog Post",
+    content: "Testing out if this works",
+  }
 ];
 
 const skillsContainer = document.querySelector(

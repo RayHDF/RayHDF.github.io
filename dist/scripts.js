@@ -41,19 +41,34 @@ const projects = [
         skills: ["Unity", "C#"],
         github: "#",
     },
+    {
+        title: "Microservice Business Management System (WIP)",
+        description: "A microservice-based business management system to track transactions, customers, and services",
+        skills: ["Express.js", "Supabase", "React", "Node.js", "TypeScript"],
+        github: "WIP"
+    },
+    {
+        title: "Learning Management System (WIP)",
+        description: "A Learning Management System to manage courses, students, and lecturers",
+        skills: ["PostgreSQL", "Express.js", "React", "Node.js", "TypeScript"],
+        github: "WIP"
+    },
 ];
-// Add this after the existing const arrays
 const blogPosts = [
     {
         date: "30-10-2024",
         title: "My First Blog Post",
         content: `Hello! This is my first blog post. I will share my experiences and thoughts here.`,
     },
+    {
+        date: "31-10-2024",
+        title: "My Second Blog Post",
+        content: "Testing out if this works",
+    }
 ];
 const skillsContainer = document.querySelector(".skills-container");
 const projectsContainer = document.querySelector(".projects-container");
 const filterButtons = document.querySelectorAll(".filter-btn");
-// Add these lines after the existing container constants
 const blogContainer = document.querySelector(".blog-container");
 function createSkillCard(skill) {
     return `
@@ -85,7 +100,6 @@ function createProjectCard(project) {
         </div>
     `;
 }
-// Add this function before displayContent
 function createBlogPost(post) {
     return `
         <article class="blog-post">
@@ -95,7 +109,6 @@ function createBlogPost(post) {
         </article>
     `;
 }
-// Modify the displayContent function to handle blogs
 function displayContent(filter = "skills") {
     skillsContainer.style.display = filter === "skills" ? "grid" : "none";
     projectsContainer.style.display = filter === "projects" ? "grid" : "none";
